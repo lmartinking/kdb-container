@@ -24,3 +24,13 @@ podman run -p 5000:5000 -e KDB_LICENSE_B64=$( cat kc.lic.txt ) kdb
 
 This will utilise the default startup command, which is `q -p 0.0.0.0:5000`.
 
+## Import into K3S
+
+If you build this on the machine which is hosting k3s, then you can use:
+
+```
+make k3s-import
+```
+
+To import the image into k3s. You will need to build it first.
+
