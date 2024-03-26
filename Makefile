@@ -1,7 +1,7 @@
 # Handy shortcuts to build this
 
-TAG := kdb
-	
+TAG := ghcr.io/lmartinking/kdb-container:latest
+
 .PHONY: container
 container: Containerfile entrypoint.sh l64.zip
 	buildah build --squash -t $(TAG)
